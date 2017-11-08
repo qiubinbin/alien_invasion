@@ -206,9 +206,11 @@ def update_aliens(all_settings, aliens, ship, stats, screen, bullets, score_get,
 	aliens.update()
 	# 检测外星人和飞船的碰撞
 	if stats.shield_active:
-		pygame.sprite.spritecollide(shield, aliens, True)
-	if pygame.sprite.spritecollideany(ship, aliens):
-		ship_hit(all_settings, stats, screen, ship, aliens, bullets, score_get, enemy_bullets)
+		pygame.sprite.spritecollide(shield,aliens,True)
+		# pygame.sprite.spritecollide(shield,enemy_bullets,True)
+	else:
+		if pygame.sprite.spritecollideany(ship, aliens):
+			ship_hit(all_settings, stats, screen, ship, aliens, bullets, score_get, enemy_bullets)
 	check_aliens_bottom(all_settings, stats, screen, ship, aliens, bullets, score_get, enemy_bullets)
 
 
