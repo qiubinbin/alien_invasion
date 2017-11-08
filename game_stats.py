@@ -8,6 +8,7 @@ class Gamestats():
 		self.all_setting = all_settings
 		self.reset_stats()
 		self.game_active = False
+		self.shield_active=False
 		# 读取历史数据
 		with open('history/hightest.json', 'r') as temp:
 			self.hightest_score = int(json.load(temp))

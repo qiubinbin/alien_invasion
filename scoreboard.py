@@ -52,12 +52,11 @@ class Scoreboard():
 
 	def prep_ships(self):
 		self.ships_left = Group()
-		# number_ships = self.stats.ship_left
-		# while number_ships > 0:
 		for number_ships in range(self.stats.ship_left):
 			ship_temp = Ship(self.screen, self.all_settings)
-			# ship_temp.rect.top = self.screen_rect.top
-			# ship_temp.rect.left = ship_temp.rect.width * number_ships
+			ship_temp.image = pygame.transform.smoothscale(ship_temp.image,
+														   (ship_temp.rect.width // 4, ship_temp.rect.height // 4))
+			ship_temp.rect=ship_temp.image.get_rect()
 			ship_temp.rect.x = 10 + ship_temp.rect.width * number_ships
 			ship_temp.rect.y = 10
 			self.ships_left.add(ship_temp)
