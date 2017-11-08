@@ -41,7 +41,7 @@ class Ship(Sprite):
 
 	def update_center(self):
 		self.rect.bottom = self.screen_rect.bottom
-		self.rect.centerx = self.screen_rect.centerx
+		# self.rect.centerx = self.screen_rect.centerx
 		"""复位时记得把计数恢复初始值"""
 		self.center_x = float(self.rect.centerx)
 		self.center_bottom = float(self.rect.bottom)

@@ -34,9 +34,9 @@ def run_game():
 		if stats.game_active:
 			ship.update()
 			shield.set_pos()
-			gf.update_enemy_bullets(enemy_bullets, all_setting)
 			gf.update_bullets(bullets, aliens, all_setting, screen, ship, stats, score_get, enemy_bullets)
 			gf.update_aliens(all_setting, aliens, ship, stats, screen, bullets, score_get, shield, enemy_bullets)
+			gf.update_enemy_bullets(enemy_bullets, all_setting)
 		gf.update_screen(all_setting, screen, ship, aliens, bullets, play_button, stats, score_get, shield,
 						 enemy_bullets)
 
