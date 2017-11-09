@@ -11,7 +11,7 @@ class EnemyBullet(Sprite):
 		self.ship = ship
 		self.screen = screen
 		self.alien = alien
-		self.speed = 1
+		self.speed = 2
 		self.radius = 2
 		self.color = (72, 61, 139)
 		self.x = self.alien.rect.centerx

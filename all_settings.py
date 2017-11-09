@@ -6,7 +6,7 @@ class AllSettings():
 		# 屏幕设置
 		self.screen_width = 1280
 		self.screen_height = 960
-		self.bg_color = (255, 255, 255)
+		self.bg_color = (240, 86, 84)
 		self.speed_scale = 1.1
 		self.initialize_dynamic_settings()
 		self.bullet_width = 100
