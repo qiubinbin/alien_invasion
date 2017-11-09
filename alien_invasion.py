@@ -42,3 +42,4 @@ def run_game():
 
 
 run_game()
+#加强了碰撞测试
