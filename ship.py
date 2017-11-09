@@ -7,8 +7,9 @@ class Ship(Sprite):
 		"""初始化设置及其位置"""
 		self.screen = screen
 		# 加载飞船外形并获取其外接矩形
-		self.image = pygame.image.load('images/ship_alpha.png')
+		self.image = pygame.image.load('images/ship_alpha.png').convert_alpha()
 		self.rect = self.image.get_rect()
+		self.mask=pygame.mask.from_surface(self.image)
 		self.screen_rect = self.screen.get_rect()
 		# 将每艘新飞船放在屏幕底部
 		self.rect.centerx = self.screen_rect.centerx
